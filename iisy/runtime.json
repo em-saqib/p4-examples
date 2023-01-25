@@ -1,0 +1,494 @@
+{ 
+"target":"bmv2",
+"p4info":"build/example.p4info",
+"bmv2_json":"build/example.json",
+"table_entries":[
+{
+    "table": "MyIngress.ipv4_exact", 
+    "match": {
+        "meta.action_select1": [
+            1, 
+            1
+        ], 
+        "meta.action_select2": [
+            1, 
+            1
+        ], 
+        "meta.action_select3": [
+            1, 
+            2
+        ]
+    }, 
+    "action_name": "MyIngress.ipv4_forward", 
+    "action_params": {
+        "dstAddr": "00:00:00:02:02:00", 
+        "port": 2
+    }
+},
+{
+    "table": "MyIngress.ipv4_exact", 
+    "match": {
+        "meta.action_select1": [
+            1, 
+            1
+        ], 
+        "meta.action_select2": [
+            1, 
+            1
+        ], 
+        "meta.action_select3": [
+            3, 
+            3
+        ]
+    }, 
+    "action_name": "MyIngress.ipv4_forward", 
+    "action_params": {
+        "dstAddr": "00:00:00:03:03:00", 
+        "port": 3
+    }
+},
+{
+    "table": "MyIngress.ipv4_exact", 
+    "match": {
+        "meta.action_select1": [
+            1, 
+            1
+        ], 
+        "meta.action_select2": [
+            1, 
+            1
+        ], 
+        "meta.action_select3": [
+            4, 
+            6
+        ]
+    }, 
+    "action_name": "MyIngress.ipv4_forward", 
+    "action_params": {
+        "dstAddr": "00:00:00:04:04:00", 
+        "port": 4
+    }
+},
+{
+    "table": "MyIngress.ipv4_exact", 
+    "match": {
+        "meta.action_select1": [
+            1, 
+            1
+        ], 
+        "meta.action_select2": [
+            2, 
+            2
+        ], 
+        "meta.action_select3": [
+            1, 
+            6
+        ]
+    }, 
+    "action_name": "MyIngress.ipv4_forward", 
+    "action_params": {
+        "dstAddr": "00:00:00:03:03:00", 
+        "port": 3
+    }
+},
+{
+    "table": "MyIngress.ipv4_exact", 
+    "match": {
+        "meta.action_select1": [
+            1, 
+            1
+        ], 
+        "meta.action_select2": [
+            3, 
+            3
+        ], 
+        "meta.action_select3": [
+            1, 
+            6
+        ]
+    }, 
+    "action_name": "MyIngress.ipv4_forward", 
+    "action_params": {
+        "dstAddr": "00:00:00:04:04:00", 
+        "port": 4
+    }
+},
+{
+    "table": "MyIngress.ipv4_exact", 
+    "match": {
+        "meta.action_select1": [
+            1, 
+            1
+        ], 
+        "meta.action_select2": [
+            4, 
+            4
+        ], 
+        "meta.action_select3": [
+            1, 
+            4
+        ]
+    }, 
+    "action_name": "MyIngress.ipv4_forward", 
+    "action_params": {
+        "dstAddr": "00:00:00:02:02:00", 
+        "port": 2
+    }
+},
+{
+    "table": "MyIngress.ipv4_exact", 
+    "match": {
+        "meta.action_select1": [
+            1, 
+            1
+        ], 
+        "meta.action_select2": [
+            5, 
+            5
+        ], 
+        "meta.action_select3": [
+            1, 
+            4
+        ]
+    }, 
+    "action_name": "MyIngress.ipv4_forward", 
+    "action_params": {
+        "dstAddr": "00:00:00:02:02:00", 
+        "port": 2
+    }
+},
+{
+    "table": "MyIngress.ipv4_exact", 
+    "match": {
+        "meta.action_select1": [
+            1, 
+            1
+        ], 
+        "meta.action_select2": [
+            4, 
+            5
+        ], 
+        "meta.action_select3": [
+            5, 
+            5
+        ]
+    }, 
+    "action_name": "MyIngress.ipv4_forward", 
+    "action_params": {
+        "dstAddr": "00:00:00:04:04:00", 
+        "port": 4
+    }
+},
+{
+    "table": "MyIngress.ipv4_exact", 
+    "match": {
+        "meta.action_select1": [
+            1, 
+            1
+        ], 
+        "meta.action_select2": [
+            4, 
+            5
+        ], 
+        "meta.action_select3": [
+            6, 
+            6
+        ]
+    }, 
+    "action_name": "MyIngress.ipv4_forward", 
+    "action_params": {
+        "dstAddr": "00:00:00:02:02:00", 
+        "port": 2
+    }
+},
+{
+    "table": "MyIngress.ipv4_exact", 
+    "match": {
+        "meta.action_select1": [
+            1, 
+            1
+        ], 
+        "meta.action_select2": [
+            6, 
+            6
+        ], 
+        "meta.action_select3": [
+            1, 
+            1
+        ]
+    }, 
+    "action_name": "MyIngress.ipv4_forward", 
+    "action_params": {
+        "dstAddr": "00:00:00:02:02:00", 
+        "port": 2
+    }
+},
+{
+    "table": "MyIngress.ipv4_exact", 
+    "match": {
+        "meta.action_select1": [
+            1, 
+            1
+        ], 
+        "meta.action_select2": [
+            7, 
+            7
+        ], 
+        "meta.action_select3": [
+            1, 
+            1
+        ]
+    }, 
+    "action_name": "MyIngress.ipv4_forward", 
+    "action_params": {
+        "dstAddr": "00:00:00:02:02:00", 
+        "port": 2
+    }
+},
+{
+    "table": "MyIngress.ipv4_exact", 
+    "match": {
+        "meta.action_select1": [
+            1, 
+            1
+        ], 
+        "meta.action_select2": [
+            8, 
+            8
+        ], 
+        "meta.action_select3": [
+            1, 
+            1
+        ]
+    }, 
+    "action_name": "MyIngress.ipv4_forward", 
+    "action_params": {
+        "dstAddr": "00:00:00:02:02:00", 
+        "port": 2
+    }
+},
+{
+    "table": "MyIngress.ipv4_exact", 
+    "match": {
+        "meta.action_select1": [
+            1, 
+            1
+        ], 
+        "meta.action_select2": [
+            6, 
+            8
+        ], 
+        "meta.action_select3": [
+            2, 
+            6
+        ]
+    }, 
+    "action_name": "MyIngress.ipv4_forward", 
+    "action_params": {
+        "dstAddr": "00:00:00:02:02:00", 
+        "port": 2
+    }
+},
+{
+    "table": "MyIngress.feature1_exact",
+    "match": {
+        "hdr.ipv4.protocol": [
+            0,
+            32
+        ]
+    },
+    "action_name": "MyIngress.set_actionselect1",
+    "action_params": {
+        "featurevalue1": 1
+    }
+},
+{
+    "table": "MyIngress.feature2_exact",
+    "match": {
+        "hdr.tcp.srcPort": [
+            0,
+            40697
+        ]
+    },
+    "action_name": "MyIngress.set_actionselect2",
+    "action_params": {
+        "featurevalue2": 1
+    }
+},
+{
+    "table": "MyIngress.feature2_exact",
+    "match": {
+        "hdr.tcp.srcPort": [
+            40697,
+            41745
+        ]
+    },
+    "action_name": "MyIngress.set_actionselect2",
+    "action_params": {
+        "featurevalue2": 2
+    }
+},
+{
+    "table": "MyIngress.feature2_exact",
+    "match": {
+        "hdr.tcp.srcPort": [
+            41745,
+            42822
+        ]
+    },
+    "action_name": "MyIngress.set_actionselect2",
+    "action_params": {
+        "featurevalue2": 3
+    }
+},
+{
+    "table": "MyIngress.feature2_exact",
+    "match": {
+        "hdr.tcp.srcPort": [
+            42822,
+            45174
+        ]
+    },
+    "action_name": "MyIngress.set_actionselect2",
+    "action_params": {
+        "featurevalue2": 4
+    }
+},
+{
+    "table": "MyIngress.feature2_exact",
+    "match": {
+        "hdr.tcp.srcPort": [
+            45174,
+            49216
+        ]
+    },
+    "action_name": "MyIngress.set_actionselect2",
+    "action_params": {
+        "featurevalue2": 5
+    }
+},
+{
+    "table": "MyIngress.feature2_exact",
+    "match": {
+        "hdr.tcp.srcPort": [
+            49216,
+            50481
+        ]
+    },
+    "action_name": "MyIngress.set_actionselect2",
+    "action_params": {
+        "featurevalue2": 6
+    }
+},
+{
+    "table": "MyIngress.feature2_exact",
+    "match": {
+        "hdr.tcp.srcPort": [
+            50481,
+            56820
+        ]
+    },
+    "action_name": "MyIngress.set_actionselect2",
+    "action_params": {
+        "featurevalue2": 7
+    }
+},
+{
+    "table": "MyIngress.feature2_exact",
+    "match": {
+        "hdr.tcp.srcPort": [
+            56820,
+            65535
+        ]
+    },
+    "action_name": "MyIngress.set_actionselect2",
+    "action_params": {
+        "featurevalue2": 8
+    }
+},
+{
+    "table": "MyIngress.feature3_exact",
+    "match": {
+        "hdr.tcp.dstPort": [
+            0,
+            66
+        ]
+    },
+    "action_name": "MyIngress.set_actionselect3",
+    "action_params": {
+        "featurevalue3": 1
+    }
+},
+{
+    "table": "MyIngress.feature3_exact",
+    "match": {
+        "hdr.tcp.dstPort": [
+            66,
+            283
+        ]
+    },
+    "action_name": "MyIngress.set_actionselect3",
+    "action_params": {
+        "featurevalue3": 2
+    }
+},
+{
+    "table": "MyIngress.feature3_exact",
+    "match": {
+        "hdr.tcp.dstPort": [
+            283,
+            1832
+        ]
+    },
+    "action_name": "MyIngress.set_actionselect3",
+    "action_params": {
+        "featurevalue3": 3
+    }
+},
+{
+    "table": "MyIngress.feature3_exact",
+    "match": {
+        "hdr.tcp.dstPort": [
+            1832,
+            2541
+        ]
+    },
+    "action_name": "MyIngress.set_actionselect3",
+    "action_params": {
+        "featurevalue3": 4
+    }
+},
+{
+    "table": "MyIngress.feature3_exact",
+    "match": {
+        "hdr.tcp.dstPort": [
+            2541,
+            19098
+        ]
+    },
+    "action_name": "MyIngress.set_actionselect3",
+    "action_params": {
+        "featurevalue3": 5
+    }
+},
+{
+    "table": "MyIngress.feature3_exact",
+    "match": {
+        "hdr.tcp.dstPort": [
+            19098,
+            65535
+        ]
+    },
+    "action_name": "MyIngress.set_actionselect3",
+    "action_params": {
+        "featurevalue3": 6
+    }
+},
+{
+    "table": "MyIngress.ipv4_exact",
+    "default": true ,
+    "action_name": "MyIngress.drop",
+    "action_params": {}
+}
+] 
+  }
