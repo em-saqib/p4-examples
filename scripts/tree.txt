@@ -1,0 +1,10 @@
+proto = [103, 151, 189];
+src = [141];
+dst = [207, 297];
+ when proto<=151.5 and proto<=103.0  then 3;
+ when proto<=151.5 and proto>103.0 and src<=141.5  then 0;
+ when proto<=151.5 and proto>103.0 and src>141.5  then 3;
+ when proto>151.5 and proto<=189.5  then 4;
+ when proto>151.5 and proto>189.5 and dst<=207.5  then 1;
+ when proto>151.5 and proto>189.5 and dst>207.5 and dst<=297.5  then 2;
+ when proto>151.5 and proto>189.5 and dst>207.5 and dst>297.5  then 4;
