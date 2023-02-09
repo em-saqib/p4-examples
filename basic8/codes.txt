@@ -1,0 +1,6 @@
+# testing Basic 8
+table_add feature1_exact set_actionselect1 0->10 => 1 1
+table_add feature2_exact set_actionselect2 0->10 => 1 1
+table_add feature3_exact set_actionselect3 0->10 => 1 1
+table_add feature4_exact set_actionselect4 0->10 => 1 1
+table_add ipv4_exact ipv4_forward 1->1 1->1 1->1 1->1 => 08:00:00:00:03:33 3 1
