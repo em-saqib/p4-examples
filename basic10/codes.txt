@@ -1,0 +1,5 @@
+# INT testing
+table_add MyIngress.process_int.int_t int_a =>
+
+table_add MyIngress.process_int.int_t int_a 1 => 10 10
+table_add MyIngress.process_int.int_t int_a 2 => 20 20
