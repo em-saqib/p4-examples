@@ -90,15 +90,6 @@ header int_header_t {
 const bit<16> INT_HEADER_SIZE = 8;
 const bit<16> INT_TOTAL_HEADER_SIZE = 12; // 8 + 4
 
-// INT meta-value headers - different header for each value type
-header int_switch_id_t {
-    bit<32> switch_id;
-}
-
-header int_hop_latency_t {
-    bit<32> hop_latency;
-}
-
 
 struct headers {
 
@@ -111,8 +102,6 @@ struct headers {
     // INT Headers
     int_header_t                int_header;
     intl4_shim_t                intl4_shim;
-    int_switch_id_t             int_switch_id;
-    int_hop_latency_t           int_hop_latency;
 
 }
 
@@ -132,5 +121,9 @@ struct local_metadata_t {
     bit<13>        r_latency;
     bit<13>        q_delay;
     bit<3>        priority;
+
+    bit<32> current_queue_bound;
+    bit<32> rank;
+
     queueing_metadata_t       queueing_metadata;
 }
