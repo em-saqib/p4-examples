@@ -1,0 +1,15 @@
+# IPERF TEST
+
+Start on servers:
+
+iperf -s -p 5000 -u -i 1 &
+iperf -s -p 5001 -u -i 1 &
+
+Start on clients:
+
+iperf -c 10.0.3.3 -i 1 -t 5 -p 5000 -u -b 8M
+
+iperf -c 10.0.3.3 -i 1 -t 5 -p 5001 -u -b 8M
+
+# Set q rate
+set_queue_rate 500 3
