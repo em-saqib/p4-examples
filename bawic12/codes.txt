@@ -1,3 +1,5 @@
+# entries for basic12
+
 table_add feature1_exact set_actionselect1 0->10 => 1 1
 table_add feature2_exact set_actionselect2 0->10 => 1 1
 table_add feature3_exact set_actionselect3 0->10 => 1 1
