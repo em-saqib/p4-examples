@@ -1,0 +1,43 @@
+#video streaming
+print('')
+print('======================================================================')
+print('h2 ./sendvideo.py')
+self.net.get("h2").cmd("./sendvideo.py > sendvideo.py.log 2>&1 &")
+sleep(2)
+print('')
+print('======================================================================')
+print('h1 ./receivevideo.py')
+self.net.get("h1").cmd("./receivevideo.py > receivevideo.py.log 2>&1 &" )
+
+#skype traffic
+print('')
+print('======================================================================')
+print('iperf -s -u -p 5001 -l 1000 -o skypeTrafficServer.log 2>&1 &')
+self.net.get("h2").cmd("iperf -s -u -p 5001 -l 500 > skypeTrafficServer.log 2>&1 &")
+sleep(2)
+print('')
+print('======================================================================')
+print('iperf -u -c 10.0.2.2 -p 5001 -l 1000 -o skypeTrafficClient.log 2>&1 &')
+self.net.get("h1").cmd("iperf -u -c 10.0.2.2 -p 5001 -l 500 > skypeTrafficClient.log 2>&1 &" )
+
+#haptic traffic
+print('')
+print('======================================================================')
+print('iperf -s -u -p 5002 -l 75 > hapticTrafficServer.log 2>&1 &')
+self.net.get("h2").cmd("iperf -s -u -p 5002 -l 75 > hapticTrafficServer.log 2>&1 &")
+sleep(2)
+print('')
+print('======================================================================')
+print('iperf -u -c 10.0.2.2 -p 5002 -l 75 > hapticTrafficClient.log 2>&1 &')
+self.net.get("h1").cmd("iperf -u -c 10.0.2.2 -p 5002 -l 75 > hapticTrafficClient.log 2>&1 &" )
+
+#SSH traffic
+print('')
+print('======================================================================')
+print('iperf -s -u -p 5003 -l 900 > skypeTrafficServer.log 2>&1 &')
+self.net.get("h2").cmd("iperf -s -u -p 5003 -l 900 > skypeTrafficServer.log 2>&1 &")
+sleep(2)
+print('')
+print('======================================================================')
+print('iperf -u -c 10.0.2.2 -p 5003 -l 900 > SSHTrafficClient.log 2>&1 &')
+self.net.get("h1").cmd("iperf -u -c 10.0.2.2 -p 5003 -l 900 > SSHTrafficClient.log 2>&1 &" )
