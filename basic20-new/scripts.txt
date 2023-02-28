@@ -1,0 +1,1 @@
+sudo grep "]  INFO CSV" s1.log > /home/p4/tutorials/exercises/basic20/s1.log
