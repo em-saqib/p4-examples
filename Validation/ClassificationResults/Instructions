@@ -9,3 +9,9 @@ Run simulation using script ./rn.sh and run ./rn2 to intert the rules.cmd to the
 Send data of filtered pcap file (pcap/filtered.pcap) using send3.py from h1 host to h3 host [h1: ./send3.py 10.0.3.3, h3: ./recieve.py]
 Copy switch s1 filtred logs to another file (sudo grep "]  INFO CSV" s1.log > /home/p4/tutorials/exercises/basic20/s1.log)
 Run ClassificationResultsFilter.py on filtred logs to extarct number of classiifed flows for each class
+
+
+
+Scripts:
+To extract unqie flows from pcap: tshark -r test.pcap -q -z conv,tcp > tcp.conv
+Split pcaps: tcpdump -r olddata.pcap -w newdata.pcap -C 10
