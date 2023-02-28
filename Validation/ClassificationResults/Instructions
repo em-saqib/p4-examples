@@ -1,0 +1,11 @@
+Download csv and pcap from UNSW website: https://iotanalytics.unsw.edu.au/iottraces.html
+Add devices names to the data using  script: addDevicesNames.py (data: csv/16-09-23.csv, deviceNames: csv/list_devices.csv)
+Filter-out the csv data to drop or select specefic devices uaing script filterDevices.py
+Makes the data ready for the model using script modelReadyData.py (save it as csv to import it to p4-VM)
+Run Machinelearning.py on the csv data (./Machinelearning -i csv/data.csv -o tree.txt)
+Run converter.py to convert the tree.txt into rules for p4 switch (./converter [input:tree.txt and action.txt output:rules.cmd])
+Filter-out the pcap data to drop or select specrfic devcices using script filterPcap.py (input: pcap/data.pcap output:pcap/filtered.pcap)
+Run simulation using script ./rn.sh and run ./rn2 to intert the rules.cmd to the switch
+Send data of filtered pcap file (pcap/filtered.pcap) using send3.py from h1 host to h3 host [h1: ./send3.py 10.0.3.3, h3: ./recieve.py]
+Copy switch s1 filtred logs to another file (sudo grep "]  INFO CSV" s1.log > /home/p4/tutorials/exercises/basic20/s1.log)
+Run ClassificationResultsFilter.py on filtred logs to extarct number of classiifed flows for each class
