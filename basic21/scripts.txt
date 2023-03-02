@@ -1,0 +1,9 @@
+./rn.sh
+
+./rn2.sh
+
+traffic from h1 to h3
+
+sudo grep "]  INFO CSV" s1.log > /home/p4/tutorials/exercises/basic20/s1.log
+
+./ClassificationResultsFilter
