@@ -1,0 +1,27 @@
+Drop : 0
+Forward to port 2: 2
+Forward to port 3: 3
+Forward to port 4: 4
+class 0: [0]
+class 1: [1]
+class 2: [2]
+class 3: [3]
+class 4: [4]
+class 5: [5]
+class 6: [6]
+class 7: [7]
+class 8: [8]
+class 9: [9]
+class 10: [10]
+class 11: [11]
+class 12: [12]
+class 13: [13]
+class 14: [14]
+class 15: [15]
+class 16: [16]
+class 17: [17]
+class 18: [18]
+class 19: [19]
+class 20: [20]
+class 21: [21]
+class 22: [22]
