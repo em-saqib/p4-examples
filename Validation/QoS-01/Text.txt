@@ -1,0 +1,5 @@
+For case 4 validation:
+
+LBF is on s3
+BW is 2.5 on out port of all switches
+Queue rate is 200 for all sitches
