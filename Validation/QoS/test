@@ -1,0 +1,4 @@
+Validation ready
+
+Classification + MP-Q + AC (packet drop and latency based forwarding)
+Topology: IN load: 3.15MB Out load: 2.3 on all switches; queue_rate: 200 on all switches
