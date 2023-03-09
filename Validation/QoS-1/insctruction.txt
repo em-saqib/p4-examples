@@ -1,13 +1,40 @@
 # Simulation setup:
 
-simple_switch_CLI --thrift-port 9090
-set_queue_rate 2083 4
-set_queue_depth 5
+Validation ready for case-4: 
+Switch-1: Classification MP-Qs and packet drop
+Switch-2: MP-Qs and packet drop
+Switch-3: MP-Qs and packet drop and latency based forwarding
 
-simple_switch_CLI --thrift-port 9091
-set_queue_rate 2083 2
-set_queue_depth 5
+Input demand in total : 3.15 Mbps
+BW: 2.5Mbps on all out port
+Q-rate: 200pps on all out ports
 
-simple_switch_CLI --thrift-port 9092
-set_queue_rate 2083 2
-set_queue_depth 5
+
+
+Run-execisre script addition from line 204 to end of function:
+
+        print('Adding switch configuration')
+        os.popen('sh /home/p4/tutorials/exercises/QoS-1/rn2.sh')
+        sleep(1)
+        print('Sending traffic and generating logs')
+        os.popen('sh /home/p4/tutorials/exercises/QoS-1/rn3.sh')
+        sleep(1)
+
+
+        #Editing starts here
+        # print('python3 send1.py 10.0.5.5')
+        # self.net.get("h1").cmd("python3 send1.py 10.0.5.5")
+        # sleep(2)
+
+        #os.system("kill -9 $(grep top)")
+        #self.net.stop()
+
+        # Editing ends here
+
+
+        self.do_net_cli()
+        # stop right after the CLI is exited
+        self.net.stop()
+        
+        
+   
