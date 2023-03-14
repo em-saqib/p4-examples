@@ -1,0 +1,13 @@
+# Simulation setup:
+
+simple_switch_CLI --thrift-port 9090
+set_queue_rate 2083 4
+set_queue_depth 5
+
+simple_switch_CLI --thrift-port 9091
+set_queue_rate 2083 2
+set_queue_depth 5
+
+simple_switch_CLI --thrift-port 9092
+set_queue_rate 2083 2
+set_queue_depth 5
