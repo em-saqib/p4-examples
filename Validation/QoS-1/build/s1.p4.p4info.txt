@@ -1,0 +1,390 @@
+pkg_info {
+  arch: "v1model"
+}
+tables {
+  preamble {
+    id: 44082171
+    name: "MyIngress.process_int.int_t"
+    alias: "int_t"
+  }
+  action_refs {
+    id: 31240797
+  }
+  action_refs {
+    id: 21257015
+  }
+  const_default_action_id: 21257015
+  size: 1024
+}
+tables {
+  preamble {
+    id: 37066657
+    name: "MyIngress.classification.feature1_exact"
+    alias: "feature1_exact"
+  }
+  match_fields {
+    id: 1
+    name: "metadata.firstPacketSize"
+    bitwidth: 16
+    match_type: RANGE
+  }
+  action_refs {
+    id: 21257015
+  }
+  action_refs {
+    id: 26930789
+  }
+  size: 1024
+}
+tables {
+  preamble {
+    id: 34221242
+    name: "MyIngress.classification.feature2_exact"
+    alias: "feature2_exact"
+  }
+  match_fields {
+    id: 1
+    name: "metadata.secondPacketSize"
+    bitwidth: 16
+    match_type: RANGE
+  }
+  action_refs {
+    id: 21257015
+  }
+  action_refs {
+    id: 31343849
+  }
+  size: 1024
+}
+tables {
+  preamble {
+    id: 36424776
+    name: "MyIngress.classification.feature3_exact"
+    alias: "feature3_exact"
+  }
+  match_fields {
+    id: 1
+    name: "metadata.thirdPacketSize"
+    bitwidth: 16
+    match_type: RANGE
+  }
+  action_refs {
+    id: 21257015
+  }
+  action_refs {
+    id: 33466154
+  }
+  size: 1024
+}
+tables {
+  preamble {
+    id: 45121196
+    name: "MyIngress.classification.feature4_exact"
+    alias: "feature4_exact"
+  }
+  match_fields {
+    id: 1
+    name: "metadata.fourthPacketSize"
+    bitwidth: 16
+    match_type: RANGE
+  }
+  action_refs {
+    id: 21257015
+  }
+  action_refs {
+    id: 32390400
+  }
+  size: 1024
+}
+tables {
+  preamble {
+    id: 35985711
+    name: "MyIngress.classification.set_class_t"
+    alias: "set_class_t"
+  }
+  match_fields {
+    id: 1
+    name: "metadata.action_select1"
+    bitwidth: 14
+    match_type: RANGE
+  }
+  match_fields {
+    id: 2
+    name: "metadata.action_select2"
+    bitwidth: 14
+    match_type: RANGE
+  }
+  match_fields {
+    id: 3
+    name: "metadata.action_select3"
+    bitwidth: 14
+    match_type: RANGE
+  }
+  match_fields {
+    id: 4
+    name: "metadata.action_select4"
+    bitwidth: 14
+    match_type: RANGE
+  }
+  action_refs {
+    id: 23927236
+  }
+  action_refs {
+    id: 29206541
+  }
+  action_refs {
+    id: 21257015
+  }
+  size: 1024
+}
+tables {
+  preamble {
+    id: 37375156
+    name: "MyIngress.ipv4_lpm"
+    alias: "ipv4_lpm"
+  }
+  match_fields {
+    id: 1
+    name: "hdr.ipv4.dst_addr"
+    bitwidth: 32
+    match_type: LPM
+  }
+  action_refs {
+    id: 28792405
+  }
+  action_refs {
+    id: 25652968
+  }
+  action_refs {
+    id: 21257015
+  }
+  size: 1024
+}
+actions {
+  preamble {
+    id: 21257015
+    name: "NoAction"
+    alias: "NoAction"
+    annotations: "@noWarn(\"unused\")"
+  }
+}
+actions {
+  preamble {
+    id: 31240797
+    name: "MyIngress.process_int.int_a"
+    alias: "int_a"
+  }
+}
+actions {
+  preamble {
+    id: 29206541
+    name: "MyIngress.classification.drop"
+    alias: "classification.drop"
+  }
+}
+actions {
+  preamble {
+    id: 23927236
+    name: "MyIngress.classification.set_class_a"
+    alias: "set_class_a"
+  }
+  params {
+    id: 1
+    name: "port"
+    bitwidth: 9
+  }
+}
+actions {
+  preamble {
+    id: 26930789
+    name: "MyIngress.classification.set_actionselect1"
+    alias: "set_actionselect1"
+  }
+  params {
+    id: 1
+    name: "featurevalue1"
+    bitwidth: 14
+  }
+}
+actions {
+  preamble {
+    id: 31343849
+    name: "MyIngress.classification.set_actionselect2"
+    alias: "set_actionselect2"
+  }
+  params {
+    id: 1
+    name: "featurevalue2"
+    bitwidth: 14
+  }
+}
+actions {
+  preamble {
+    id: 33466154
+    name: "MyIngress.classification.set_actionselect3"
+    alias: "set_actionselect3"
+  }
+  params {
+    id: 1
+    name: "featurevalue3"
+    bitwidth: 14
+  }
+}
+actions {
+  preamble {
+    id: 32390400
+    name: "MyIngress.classification.set_actionselect4"
+    alias: "set_actionselect4"
+  }
+  params {
+    id: 1
+    name: "featurevalue4"
+    bitwidth: 14
+  }
+}
+actions {
+  preamble {
+    id: 25652968
+    name: "MyIngress.drop"
+    alias: "MyIngress.drop"
+  }
+}
+actions {
+  preamble {
+    id: 28792405
+    name: "MyIngress.ipv4_forward"
+    alias: "ipv4_forward"
+  }
+  params {
+    id: 1
+    name: "dst_addr"
+    bitwidth: 48
+  }
+  params {
+    id: 2
+    name: "port"
+    bitwidth: 9
+  }
+}
+registers {
+  preamble {
+    id: 371691048
+    name: "queue_bound"
+    alias: "queue_bound"
+  }
+  type_spec {
+    bitstring {
+      bit {
+        bitwidth: 32
+      }
+    }
+  }
+  size: 8
+}
+registers {
+  preamble {
+    id: 384535817
+    name: "queue_delay"
+    alias: "queue_delay"
+  }
+  type_spec {
+    bitstring {
+      bit {
+        bitwidth: 32
+      }
+    }
+  }
+  size: 8
+}
+registers {
+  preamble {
+    id: 379934008
+    name: "procTime_reg"
+    alias: "procTime_reg"
+  }
+  type_spec {
+    bitstring {
+      bit {
+        bitwidth: 32
+      }
+    }
+  }
+  size: 8
+}
+registers {
+  preamble {
+    id: 382575038
+    name: "MyIngress.classification.flows_vector"
+    alias: "flows_vector"
+  }
+  type_spec {
+    bitstring {
+      bit {
+        bitwidth: 16
+      }
+    }
+  }
+  size: 100000
+}
+registers {
+  preamble {
+    id: 369177366
+    name: "MyIngress.classification.packet_counter_reg"
+    alias: "packet_counter_reg"
+  }
+  type_spec {
+    bitstring {
+      bit {
+        bitwidth: 16
+      }
+    }
+  }
+  size: 100000
+}
+registers {
+  preamble {
+    id: 370432084
+    name: "MyIngress.classification.c_p_counter_reg"
+    alias: "c_p_counter_reg"
+  }
+  type_spec {
+    bitstring {
+      bit {
+        bitwidth: 16
+      }
+    }
+  }
+  size: 100000
+}
+registers {
+  preamble {
+    id: 381476723
+    name: "MyIngress.classification.flow_counter_reg"
+    alias: "flow_counter_reg"
+  }
+  type_spec {
+    bitstring {
+      bit {
+        bitwidth: 16
+      }
+    }
+  }
+  size: 100000
+}
+registers {
+  preamble {
+    id: 385795327
+    name: "MyIngress.classification.classifiedFlows"
+    alias: "classifiedFlows"
+  }
+  type_spec {
+    bitstring {
+      bit {
+        bitwidth: 16
+      }
+    }
+  }
+  size: 100000
+}
+type_info {
+}

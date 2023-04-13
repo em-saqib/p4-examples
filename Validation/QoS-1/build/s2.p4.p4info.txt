@@ -1,0 +1,157 @@
+pkg_info {
+  arch: "v1model"
+}
+tables {
+  preamble {
+    id: 44082171
+    name: "MyIngress.process_int.int_t"
+    alias: "int_t"
+  }
+  action_refs {
+    id: 31240797
+  }
+  action_refs {
+    id: 21257015
+  }
+  const_default_action_id: 21257015
+  size: 1024
+}
+tables {
+  preamble {
+    id: 37375156
+    name: "MyIngress.ipv4_lpm"
+    alias: "ipv4_lpm"
+  }
+  match_fields {
+    id: 1
+    name: "hdr.ipv4.dst_addr"
+    bitwidth: 32
+    match_type: LPM
+  }
+  action_refs {
+    id: 28792405
+  }
+  action_refs {
+    id: 25652968
+  }
+  action_refs {
+    id: 21257015
+  }
+  size: 1024
+}
+actions {
+  preamble {
+    id: 21257015
+    name: "NoAction"
+    alias: "NoAction"
+    annotations: "@noWarn(\"unused\")"
+  }
+}
+actions {
+  preamble {
+    id: 31240797
+    name: "MyIngress.process_int.int_a"
+    alias: "int_a"
+  }
+}
+actions {
+  preamble {
+    id: 25652968
+    name: "MyIngress.drop"
+    alias: "drop"
+  }
+}
+actions {
+  preamble {
+    id: 28792405
+    name: "MyIngress.ipv4_forward"
+    alias: "ipv4_forward"
+  }
+  params {
+    id: 1
+    name: "dst_addr"
+    bitwidth: 48
+  }
+  params {
+    id: 2
+    name: "port"
+    bitwidth: 9
+  }
+}
+registers {
+  preamble {
+    id: 379934008
+    name: "procTime_reg"
+    alias: "procTime_reg"
+  }
+  type_spec {
+    bitstring {
+      bit {
+        bitwidth: 32
+      }
+    }
+  }
+  size: 1
+}
+registers {
+  preamble {
+    id: 371691048
+    name: "queue_bound"
+    alias: "queue_bound"
+  }
+  type_spec {
+    bitstring {
+      bit {
+        bitwidth: 32
+      }
+    }
+  }
+  size: 8
+}
+registers {
+  preamble {
+    id: 384535817
+    name: "queue_delay"
+    alias: "queue_delay"
+  }
+  type_spec {
+    bitstring {
+      bit {
+        bitwidth: 32
+      }
+    }
+  }
+  size: 8
+}
+registers {
+  preamble {
+    id: 373974701
+    name: "packet_counter_reg"
+    alias: "packet_counter_reg"
+  }
+  type_spec {
+    bitstring {
+      bit {
+        bitwidth: 16
+      }
+    }
+  }
+  size: 100000
+}
+registers {
+  preamble {
+    id: 384911263
+    name: "c_p_counter_reg"
+    alias: "c_p_counter_reg"
+  }
+  type_spec {
+    bitstring {
+      bit {
+        bitwidth: 16
+      }
+    }
+  }
+  size: 100000
+}
+type_info {
+}
