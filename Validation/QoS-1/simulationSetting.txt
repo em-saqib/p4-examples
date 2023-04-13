@@ -1,0 +1,4 @@
+This the last simulation for TNSM. 
+The bandwidth drop rate is ser 12% (2.68) on all outout ports of switchs.
+The generated packets are 10,000 for each class
+Queue rate is 210 on all ports
